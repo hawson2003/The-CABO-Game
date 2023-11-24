@@ -3,6 +3,7 @@
 #include <vector>
 #include <random>
 #include <stdlib.h>
+#include <unistd.h>
 #include <algorithm>
 using namespace std;
 
@@ -462,8 +463,6 @@ public:
     // initialize the deck
     void initiateDeck (Player& player, Player& comp1, Player& comp2) {
         // create a deck for draw
-        /*REVISION*/
-        // deck = createCheatDeck();
         deck = createDeck();
         // add a card to FOLD deck to begin with
         Card card = drawCard(deck);
@@ -481,6 +480,8 @@ public:
         sumHistory.push_back(player.calHandValue());
         sumHistory.push_back(comp1.calHandValue());
         sumHistory.push_back(comp2.calHandValue());
+        // clear the history vector and add 5 empty lines
+        history = {"", "", "", "", ""};
     }
 
     // function to create a deck in order
@@ -701,16 +702,36 @@ public:
                 case 2:
                     return "It is time to calculate the total value of everyone's hand.";
             }
+        } else if (hintContent == 6) {
+            if (cardValue == 1) {
+                switch (line) {
+                    case 1:
+                        return "CP1 is thinking ...";
+                }
+            } else if (cardValue == 2) {
+                switch (line) {
+                    case 2:
+                        return "CP2 is thinking ...";
+                }
+            }
         }
         return "";
     }
 
     // function to print the gameboard on screen
     void printTable (Player player, Player comp1, Player comp2, int roundNum, int hintContent, int cardValue = 0) {
+        // clear screen
+        cout << "\033[2J\033[1;1H";
+        // print history
+        cout << "... ..." << endl;
+       for (int i = history.size() - 5; i < history.size(); i++) {
+            cout << history[i] << endl;
+       }
+        // print game table
         cout << toMiddle("/" + string(15, '-') + "\\", 29) << " " << endl;
         cout << toMiddle("|" + toMiddle("ROUND " + to_string(roundNum), 15) + "|", 29) << " " << showGuide(0, hintContent, cardValue) << endl;
         cout << space(5) << "A|" << comp1.showOneCard(0, player) << space(11) << comp2.showOneCard(0, player) << "|A" << space(5) << " " << showGuide(1, hintContent, cardValue) << endl;
-        cout << toMiddle("|" + toMiddle("FOLD", 15) + "|", 29) << showGuide(2, hintContent, cardValue) << endl;
+        cout << toMiddle("|" + toMiddle("FOLD", 15) + "|", 29) << " " << showGuide(2, hintContent, cardValue) << endl;
         cout << space(1) << "CP1 B|" << comp1.showOneCard(1, player) << space(4) << folddeck.back().printCard() << space(5) << comp2.showOneCard(1, player) << "|B CP2" << space(1) << " " << showGuide(3, hintContent, cardValue) << endl;
         cout << space(1) << comp1.showScore() << space(2) << "|" << space(15) << "|" << space(2) << comp2.showScore() << space(1) << " " << showGuide(4, hintContent, cardValue) << endl;
         cout << space(5) << "C|" << comp1.showOneCard(2, player) << toMiddle("DRAW", 11) << comp2.showOneCard(2, player) << "|C" << space(5) << " " << showGuide(5, hintContent, cardValue) << endl;
@@ -750,7 +771,7 @@ public:
         player.addToKnown(player.showHand()[ch2 - 'A']);
         
         // print the choices and store in history
-        string msg = player.showName() + " have peeked at cards " + ch1 + " and " + ch2 + ".";
+        string msg = player.showName() + " has peeked at cards " + ch1 + " and " + ch2 + ".";
         printMsg(msg);
     }
     void computerPeek (Player& comp, Player& player) {
@@ -1032,7 +1053,8 @@ public:
 
         } else {
             // player call cabo
-            cout << "You called CABO!" << endl;
+            string msg = player.showName() + " call CABO!";
+            printMsg(msg);
             cabo = 3;
             player.setPlayerValue(-1);
 
@@ -1117,7 +1139,14 @@ public:
     // computer action in a turn
     void computerAction (Player& comp, Player& player, Player& comp1, Player& comp2, int& cabo, int& turn) {
         /*REVISION*/
-        printTable(player, comp1, comp2, roundNum, 0);
+        if (comp.showName() == "CP1") {
+            printTable(player, comp1, comp2, roundNum, 6, 1);
+        } else {
+            printTable(player, comp1, comp2, roundNum, 6, 2);
+        }
+        // sleep for a few seconds.
+        sleep(3);
+        
         if (cabo == -1 && comp.knownAllCards() && comp.calHandValue() <= computerCaboCondition(turn)) {
             // computer call cabo
             cout << comp.showName() << " called CABO!" << endl;
@@ -1225,6 +1254,10 @@ public:
                     Card card2 = comp.swapWithHand(swapTarget.showHand()[pos], selfpos_char);
                     if (swapTarget.showName() == player.showName()) {
                         player.swapWithHand(card2, pos_char);
+                    } else if (swapTarget.showName() == comp1.showName()) {
+                        comp1.swapWithHand(card2, pos_char);
+                    } else {
+                        comp2.swapWithHand(card2, pos_char);
                     }
                     // print message
                     string msg = comp.showName() + " draw and play " + card.printCard() + ", and use the power to swap its card " + selfpos_char + " with " + swapTarget.showName() + "'s card " + pos_char + ".";
@@ -1582,7 +1615,11 @@ void printUnicorn () {
 
 // find the winner and output
 void printWinner (Player& player, Player& comp1, Player& comp2) {
+    // clear screen
+    cout << "\033[2J\033[1;1H";
+    // print unicorn
     printUnicorn();
+    // print final scoreboard
     printAllScoreboard(player, comp1, comp2);
     cout << "Warriors, you've all been through the challenges." << endl;
     cout << "It is my pleasure to annouce that" << endl;
@@ -1600,6 +1637,8 @@ void printWinner (Player& player, Player& comp1, Player& comp2) {
 
 // start the game
 void InitiateGame () {
+    // clear screen
+    cout << "\033[2J\033[1;1H";
     // ask user to input a name for the player
     /*REVISION*/
     // string playerName = "you";
@@ -1616,6 +1655,10 @@ void InitiateGame () {
     cout << "Warrior, please check the initial scoreboard." << endl;
     printAllScoreboard(player, comp1, comp2);
     cout << endl;
+
+    string inp;
+    cout << "Enter anything to continue: ";
+    cin >> inp;
 
     while (!gameEnd(player, comp1, comp2)/* && roundNum < 2*/) {
         cout << string(30, '-') << endl;
@@ -1637,6 +1680,10 @@ void InitiateGame () {
         // round.printSumHistory();
         roundNum++;
         roundList.push_back(round);
+
+        string inp;
+        cout << "Enter anything to continue: ";
+        cin >> inp;
 
         cout << string(30, '-') << endl;
     }

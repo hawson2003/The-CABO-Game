@@ -1293,7 +1293,14 @@ public:
         // get choice
         string choice = comp.getChoice(card);
 
-        string msg = comp.showName() + " draw a card \uFFFD\uFFFD from the " + deckName + " deck, and swap with its " + choice + ".";
+        string cardOutput;
+        if (player.isKnown(card)) {
+            cardOutput = card.printCard();
+        } else {
+            cardOutput = "\uFFFD\uFFFD";
+        }
+
+        string msg = comp.showName() + " draw a card " + cardOutput + " from the " + deckName + " deck, and swap with its " + choice + ".";
         printMsg(msg);
         // swap
         if (choice.length() == 1) {
@@ -1653,6 +1660,7 @@ void InitiateGame () {
     int roundNum = 1;
 
     // print the initial scoreboard
+    cout << endl;
     cout << "Warrior, please check the initial scoreboard." << endl;
     printAllScoreboard(player, comp1, comp2);
     cout << endl;

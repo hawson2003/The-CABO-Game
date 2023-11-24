@@ -1541,6 +1541,7 @@ string toMiddle (string text, int targetLength) {
     return string(a, ' ') + text + string(b, ' ');
 }
 void Welcome () {
+    cout << "\033[2J\033[1;1H";
     cout << "-----------------------------" << endl;
     cout << endl;
     cout << " /---          |---\\ " << endl;

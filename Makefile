@@ -9,4 +9,4 @@ game: game.o
 clean:
 	rm -f game.o game
 
-.PHONY clean
+.PHONY: clean

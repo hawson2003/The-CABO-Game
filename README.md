@@ -10,6 +10,20 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 
 ## Implemented features
 
+### 1.Exchange Multiple Cards
+
+### 2.Card Special Ability
+
+### 3.KAMIKAZE
+
+### 4.Round END
+
+### 5.Scoring
+
+### 6.Game End
+
+### 7.Score Reset
+
 ## Coding requirements
 
 ### 1.

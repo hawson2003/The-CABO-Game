@@ -1,11 +1,32 @@
 # ENGG1340-GP
-1.Team member:
-Deng Qiwen
-Liu Zihao
-Mo Junbo (3036063022)
-Wang Hechen
-Zhang Kezhen
-2.Introduction
-3.Implemented features and Explaination:(5 coding elements)
-4.Non-standard C/C++ libraries
-5.Compilation and execution instructions
+
+## Team members
+
+Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
+
+## Introduction
+
+## Game rules
+
+## Implemented features
+
+## Coding requirements
+
+### 1.
+
+### 2.
+
+### 3.
+
+### 4.
+
+### 5.
+
+## Non-standard C/C++ libraries (if have)
+
+## Compilation and execution instructions
+
+1. Type **make main**
+2. Type **./main**
+
+## Problem Collection for Final Assessment

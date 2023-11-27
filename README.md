@@ -55,7 +55,7 @@ isKnown(), showOneCard() ???
 ### 3. Better Display (solved) ()
 clear screen & history ???
 
-### 4. Input Validation (solved) ()
+### 4. Input Validation (solved) (Liu Zihao)
 easyCheck() ???
 
 ### 5. Computer player deciding which card to swap (solved) (Wang Hechen)

@@ -26,7 +26,8 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 
 ## Coding requirements
 
-### 1.
+### 1. Dynamic memory management
+
 
 ### 2.
 
@@ -40,7 +41,7 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 
 ## Compilation and execution instructions
 
-1. Type **make main**
-2. Type **./main**
+1. Type **make game**
+2. Type **./game**
 
 ## Problem Collection for Final Assessment

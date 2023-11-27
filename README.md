@@ -41,9 +41,9 @@ To exchange multiple cards, all exchanged cards must have the same value (i.e., 
 
 ### Card special abilities
 If you draw a card with an ability from the draw deck, you may place it in the fold deck and use its ability. The abilities:
-1) 7-8 Peek: Secretly view one of your own facedown cards.
-2) 9-10 Spy: Secretly view a facedown card from any other player.
-3) 11-12 Swap: Exchange one of your cards with a card from another player without     flipping either card over.
+- 7-8 Peek: Secretly view one of your own facedown cards.
+- 9-10 Spy: Secretly view a facedown card from any other player.
+- 11-12 Swap: Exchange one of your cards with a card from another player without     flipping either card over.
 
 ### Kamikaze
 If a player ends the round with exactly two 13s and two 12s without any other cards, they score 0 points and each other player scores 50 points.

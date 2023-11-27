@@ -5,6 +5,14 @@
 Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 
 ## Introduction
+In the game of Cabo, you are competing with two other players to get as closer to Cabo, the unicorn, as possible. 
+
+Numbered cards represent your distance from him:
+1)JO and jo are jokers, which represent 0.
+2)A, T, J, Q, K are 1, 10, 11, 12, 13, respectively.
+3) Other cards are simplely presents the number shown on it, such as 2,3,4.
+
+The player closest to CABO at the end of the game wins.
 
 ## Game rules
 ### SETUP
@@ -37,7 +45,7 @@ If you draw a card with an ability from the draw deck, you may place it in the f
 	9-10 Spy: Secretly view a facedown card from any other player.
 	11-12 Swap: Exchange one of your cards with a card from another player without     flipping either card over.
 
-#### Kamikaze
+### Kamikaze
 If a player ends the round with exactly two 13s and two 12s without any other cards, they score 0 points and each other player scores 50 points.
 
 ### Round end

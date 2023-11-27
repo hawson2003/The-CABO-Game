@@ -7,10 +7,7 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 ## Introduction
 In the game of Cabo, you are competing with two other players to get as closer to Cabo, the unicorn, as possible. 
 
-Numbered cards represent your distance from him:
-1)JO and jo are jokers, which represent 0.
-2)A, T, J, Q, K are 1, 10, 11, 12, 13, respectively.
-3) Other cards are simplely presents the number shown on it, such as 2,3,4.
+Numbered cards represent your distance from him:\n1)JO and jo are jokers, which represent 0.\n2)A, T, J, Q, K are 1, 10, 11, 12, 13, respectively.n\3) Other cards are simplely presents the number shown on it, such as 2,3,4.
 
 The player closest to CABO at the end of the game wins.
 

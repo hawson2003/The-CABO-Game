@@ -8,9 +8,9 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 In the game of Cabo, you are competing with two other players to get as closer to Cabo, the unicorn, as possible. The sum of your cards represent your distance from him.
 
 Cards have different values:
-1. JO and jo are jokers, which represent 0.
-2. A, T, J, Q, K are 1, 10, 11, 12, 13, respectively.
-3. Other cards are simplely presents the number shown on it, such as 2,3,4.
+- JO and jo are jokers, which represent 0.
+- A, T, J, Q, K are 1, 10, 11, 12, 13, respectively.
+- Other cards are simplely presents the number shown on it, such as 2,3,4.
 
 The player closest to CABO at the end of the game wins.
 

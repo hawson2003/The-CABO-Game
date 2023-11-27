@@ -7,6 +7,54 @@ Deng Qiwen, Liu Zihao, Mo Junbo, Wang Hechen, Zhang Kezhen
 ## Introduction
 
 ## Game rules
+### SETUP
+Shuffle the deck of cards. Deal 4 cards to each player facedown in a line. Place the draw deck
+facedown in the center of the table, and place the top card faceup next to the draw deck to form a fold deck.
+
+Secretly look at any 2 of your cards and try to memorize them. Player cards may not change location. Game start from random player.
+
+### Gameplay
+Beginning with the start player, take turns clockwise. On your turn, draw a card from the draw deck or fold deck, or call CABO.
+
+#### Draw from the draw deck
+If you take the top card from the draw deck, look at it and do one of the following:
+1)	Place the card into the fold deck. If the card has a special ability, you may use it.
+2)	Exchange one or more of your cards with the card you drew. Put exchanged cards faceup into the fold deck, and put the new card facedown in an exchanged card’s place. More details on how to exchange multiple matching cards are shown in “Exchange multiple cards”.
+   
+#### Draw from the fold deck
+If you take the top card from the fold deck:
+Exchange one or more of your cards with cards you drew. Put exchanged cards faceup into the fold deck, and put the new card faceup in an exchanged card’s place.
+
+#### Call CABO
+If you call CABO, your turn ends. Each other player gets one more turn, and then the round ends.
+
+### Exchange multiple cards
+To exchange multiple cards, all exchanged cards must have the same value (i.e., all 6s).
+
+### Card special abilities
+If you draw a card with an ability from the draw deck, you may place it in the fold deck and use its ability. The abilities:
+	7-8 Peek: Secretly view one of your own facedown cards.
+	9-10 Spy: Secretly view a facedown card from any other player.
+	11-12 Swap: Exchange one of your cards with a card from another player without     flipping either card over.
+
+#### Kamikaze
+If a player ends the round with exactly two 13s and two 12s without any other cards, they score 0 points and each other player scores 50 points.
+
+### Round end
+The round ends when either one of the following events occurs:
+1)	One player has called CABO and each other player takes one more turn.
+2)	The draw deck is depleted.
+If the game did not end, shuffle the cards and play another round. The player with the lowest score in the previous round is the new start player. In case of a tie, the player closest to the previous start player becomes the new start player.
+
+### Scoring
+Your score for the round is the sum of your remaining cards.
+However, if you called CABO and have the lowest sum ( or are tied for it), you score 0 points. If you called CABO and do not have the lowest sum, you score the sum of your cards plus 10 more points. Record each player’s score for each round, and add it to the sum of the previous rounds.
+
+### Game end
+The game ends when one player has more than 100 points. The player with the lowest score wins. In case of a tie, the tied player with the lowest score in the last round wins.
+
+### Score reset
+If a player’s total score is ever exactly 100 points, their score is reset to 50 points. This may only happen one time per player per game.
 
 ## Implemented features
 

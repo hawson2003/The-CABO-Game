@@ -109,7 +109,7 @@ None
 ### 1. Shuffling a deck (solved) ()
 initiateDeck() ???
 
-### 2. Displaying visible cards (solved) ()
+### 2. Displaying visible cards (solved) (Deng Qiwen)
 isKnown(), showOneCard() ???
 
 ### 3. Better Display (solved) ()

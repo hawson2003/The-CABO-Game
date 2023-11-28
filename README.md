@@ -27,7 +27,8 @@ Beginning with the start player, take turns clockwise. On your turn, draw a card
 
 #### Draw from the draw deck
 Enter 'D' to draw from the draw deck. If you take the top card from the draw deck, look at it and do one of the following:
-1)	Enter 'N' to drop the card into the fold deck. If the card has a special ability, you may use it.
+1) Enter 'P' to play the card and use the special ability. You are allowed to enter 'P' only when the card has such special ability.
+1)	Enter 'N' to drop the card into the fold deck.
 2)	Enter 'S' to swap one or more of your cards with the card you drew. Put exchanged cards faceup into the fold deck, and put the new card facedown in an exchanged card’s place. More details on how to exchange multiple matching cards are shown in “Exchange multiple cards”.
    
 #### Draw from the fold deck

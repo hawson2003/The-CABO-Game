@@ -117,7 +117,7 @@ In order to keep the presentation tidy and help players see useful information c
 
 For clear the screen, I wrote `cout << "\033[2J\033[1;1H";` to remove the unuseful informations, and use a float `... ...` sign to indicate the part that is cleared.
 
-In addition, I wrote the string `history` and use `for` loop to print out the `history[i]` to show the last 1~5 pieces of information about the decisions players made.
+In addition, I wrote the string `history` and use `for` loop to print out the `history[i]` to show the last 1~5 pieces of information about the decisions players made. 
 
 ### 4. Input Validation (solved) (Liu Zihao)
 In order to check the input. I wrote the easyCheck to make sure whether the input is present in a vector of characters validChars. It converts input to uppercase before checking. If it is found in validChars, it returns true; otherwise, it returns false. 

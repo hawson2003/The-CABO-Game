@@ -126,6 +126,7 @@ The getChoice function prompts the user for input and checks if the input is val
 1. The length of the input string is within the range specified by minLength and maxLength.
 2. Every character in the input string is present in validChars.
 3.  All characters in the input string are unique.
+
 If the input meets all these conditions, the function returns the input string. Otherwise, it prints an error message and prompts the user again.
 
 ### 5. Computer player deciding which card to swap (solved) (Wang Hechen)

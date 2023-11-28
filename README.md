@@ -18,7 +18,7 @@ The player closest to CABO at the end of the game wins.
 In the beginning of the game, you may type 'GUIDE' to know brief introduction of game rules, 'START' to directly play the game, or 'EXIT' to stop.
 
 ### SETUP
-Shuffle the deck of cards. Deal 4 cards labelled as ABCD to each player facedown in a line. Place the draw deck facedown in the center of the table, and place the top card faceup next to the draw deck to form a fold deck.
+Shuffle the deck of cards. Deal 4 cards labeled as ABCD to each player facedown in a line. Place the draw deck facedown in the center of the table, and place the top card faceup next to the draw deck to form a fold deck.
 
 Input any two positions of your cards(i.e., AB, AC), to secretly look at them. Player cards may not change location. Game start from random player.
 

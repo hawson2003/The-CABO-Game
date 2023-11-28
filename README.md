@@ -110,7 +110,7 @@ None
 initiateDeck() ???
 
 ### 2. Displaying visible cards (solved) (Deng Qiwen)
-isKnown(), showOneCard() ???
+To display visible cards to players is a key funcion that need to be achieved in this game. To figure out which card is visible for players, I wrote `isKnown()` to check each card in player's hand is defined known or not. This function is achieved by return a true value when array knowncards[i] equals to card[i], and return false when they are not equal. Then, for known cards, `showOneCard()` is designed to make knowncards visible for players, including its number and color.
 
 ### 3. Better Display (solved) (Mo Junbo)
 clear screen & history ???

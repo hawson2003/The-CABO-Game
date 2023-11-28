@@ -112,7 +112,7 @@ initiateDeck() ???
 ### 2. Displaying visible cards (solved) (Deng Qiwen)
 isKnown(), showOneCard() ???
 
-### 3. Better Display (solved) ()
+### 3. Better Display (solved) (Mo Junbo)
 clear screen & history ???
 
 ### 4. Input Validation (solved) (Liu Zihao)

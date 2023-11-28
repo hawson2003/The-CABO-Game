@@ -117,7 +117,8 @@ clear screen & history ???
 In order to keep the presentation tidy and help players see useful information clearly, the program cleans the screen after each appropriate command and retains the last five decisions players made.
 
 For clear the screen, I wrote `cout << "\033[2J\033[1;1H";` to remove the unuseful informations, and use a float `... ...` sign to indicate the part that is cleared.
-In addition, I wrote 'history' and through printed it out to show the last five pieces of information about the decisions players made.
+
+In addition, I wrote `history` and through printed it out to show the last five pieces of information about the decisions players made.
 
 ### 4. Input Validation (solved) (Liu Zihao)
 easyCheck(), getChoice() ???

@@ -113,7 +113,6 @@ initiateDeck() ???
 To display visible cards to players is a key funcion that need to be achieved in this game. To figure out which card is visible for players, I wrote `isKnown()` to check each card in player's hand is defined known or not. This function is achieved by return a true value when array knowncards[i] equals to card[i], and return false when they are not equal. Then, for known cards, `showOneCard()` is designed to make knowncards visible for players, including its number and color.
 
 ### 3. Better Display (solved) (Mo Junbo)
-clear screen & history ???
 In order to keep the presentation tidy and help players see useful information clearly, the program cleans the screen after each appropriate command and retains the last five decisions players made.
 
 For clear the screen, I wrote `cout << "\033[2J\033[1;1H";` to remove the unuseful informations, and use a float `... ...` sign to indicate the part that is cleared.

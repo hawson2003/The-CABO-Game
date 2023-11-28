@@ -133,7 +133,7 @@ As you can see, the unit digit of the point value represents the number of appea
 
 By assigning unique points to each card in the hand, the computer player can easily determine which card(s) to swap. It simply selects the card(s) with the highest point value(s) in the hand. In the example of **55T?**, the computer player would choose to swap the two 5s.
 
-### 6. Computer player deciding when to call Cabo
+### 6. Computer player deciding when to call Cabo (solved) (Wang Hechen)
 Determining the optimal time to call Cabo is a critical decision for the computer player. Initially, I allowed the computer to call Cabo whenever its total hand value was less than 10. However, this approach proved to be a failure as the computer lost almost all rounds after calling Cabo. This happens as both computers have rather similar hand values and the one not calling cabo get another round of chance to adjust its cards.
 
 In another class, I learned about Monte Carlo Simulation, which inspired me to take a different approach. I decided to let the computer play for a million rounds by itself and gather data to analyze the best conditions for calling Cabo. After processing the collected data, I created a list stored in the function `computerCaboCondition()`. This list provides the computer player with guidelines for calling Cabo, resulting in a winning rate of approximately 50% in the game.

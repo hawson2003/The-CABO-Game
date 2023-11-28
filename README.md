@@ -121,7 +121,12 @@ For clear the screen, I wrote `cout << "\033[2J\033[1;1H";` to remove the unusef
 In addition, I wrote `history` and through printed it out to show the last five pieces of information about the decisions players made.
 
 ### 4. Input Validation (solved) (Liu Zihao)
-easyCheck(), getChoice() ???
+In order to check the input. I wrote the easyCheck to make sure whether the input is present in a vector of characters validChars. It converts input to uppercase before checking. If it is found in validChars, it returns true; otherwise, it returns false. 
+The getChoice function prompts the user for input and checks if the input is valid based on certain conditions. It keeps prompting the user until a valid input is entered. The conditions for a valid input are: 
+1. The length of the input string is within the range specified by minLength and maxLength.
+2. Every character in the input string is present in validChars.
+3.  All characters in the input string are unique.
+If the input meets all these conditions, the function returns the input string. Otherwise, it prints an error message and prompts the user again.
 
 ### 5. Computer player deciding which card to swap (solved) (Wang Hechen)
 I implemented a computer player in my CABO game using a specific logic to determine which card(s) to swap with in its hand. This part proved to be quite challenging since players have the option to swap either a single card or multiple cards with the same value in CABO. To make the decision-making process easier for the computer player, I devised a special point system.

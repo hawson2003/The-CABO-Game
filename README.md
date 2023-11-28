@@ -15,26 +15,27 @@ Cards have different values:
 The player closest to CABO at the end of the game wins.
 
 ## Game rules
-### SETUP
-Shuffle the deck of cards. Deal 4 cards to each player facedown in a line. Place the draw deck
-facedown in the center of the table, and place the top card faceup next to the draw deck to form a fold deck.
+In the beginning of the game, you may type 'GUIDE' to know brief introduction of game rules, 'START' to directly play the game, or 'EXIT' to stop.
 
-Secretly look at any 2 of your cards and try to memorize them. Player cards may not change location. Game start from random player.
+### SETUP
+Shuffle the deck of cards. Deal 4 cards labelled as ABCD to each player facedown in a line. Place the draw deck facedown in the center of the table, and place the top card faceup next to the draw deck to form a fold deck.
+
+Input any two positions of your cards(i.e., AB, AC), to secretly look at them. Player cards may not change location. Game start from random player.
 
 ### Gameplay
 Beginning with the start player, take turns clockwise. On your turn, draw a card from the draw deck or fold deck, or call CABO.
 
 #### Draw from the draw deck
-If you take the top card from the draw deck, look at it and do one of the following:
-1)	Place the card into the fold deck. If the card has a special ability, you may use it.
-2)	Exchange one or more of your cards with the card you drew. Put exchanged cards faceup into the fold deck, and put the new card facedown in an exchanged card’s place. More details on how to exchange multiple matching cards are shown in “Exchange multiple cards”.
+Enter 'D' to draw from the draw deck. If you take the top card from the draw deck, look at it and do one of the following:
+1)	Enter 'N' to drop the card into the fold deck. If the card has a special ability, you may use it.
+2)	Enter 'S' to swap one or more of your cards with the card you drew. Put exchanged cards faceup into the fold deck, and put the new card facedown in an exchanged card’s place. More details on how to exchange multiple matching cards are shown in “Exchange multiple cards”.
    
 #### Draw from the fold deck
-If you take the top card from the fold deck:
+Enter 'F' to draw from the fold deck. If you take the top card from the fold deck:
 Exchange one or more of your cards with cards you drew. Put exchanged cards faceup into the fold deck, and put the new card faceup in an exchanged card’s place.
 
 #### Call CABO
-If you call CABO, your turn ends. Each other player gets one more turn, and then the round ends.
+Enter 'C' to call CABO. If you call CABO, your turn ends. Each other player gets one more turn, and then the round ends.
 
 ### Exchange multiple cards
 To exchange multiple cards, all exchanged cards must have the same value (i.e., all 6s).

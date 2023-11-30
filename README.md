@@ -118,7 +118,7 @@ random_device rd;
 mt19937 rng(rd());
 ```
 
-Then I used Fisher-Yates Shuffling Algorithm to implement the shuffling operating of `arr[]`:
+Then I used Fisher-Yates Shuffling Algorithm to implement the shuffling operatiion of `arr[]`:
 ```
 for (size_t i = N - 1; i > 0; --i) {
    uniform_int_distribution<size_t> dist(0, i);

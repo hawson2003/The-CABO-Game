@@ -185,6 +185,6 @@ In another class, I learned about Monte Carlo Simulation, which inspired me to t
 
 ## Video (Zhang Kezhen)
 This is video to introduce the rule of CABO for easy understanding and show a gameplay.
-<video src="https://www.youtube.com/watch?v=aytw7-b1Lyg" width="640" height="480" controls></video>
+https://www.youtube.com/watch?v=aytw7-b1Lyg
 
 

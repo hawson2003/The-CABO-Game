@@ -108,11 +108,11 @@ None
 ## Problem Collection for Final Assessment
 
 ### 1. Shuffling a deck (solved) (Zhang Kezhen)
-In the function initiateDeck(), the programm has two steps: 1. initate the card deck 2. distribute the initial card to CP1, CP2 & Player. The step 2 is relatively easy, but the step 1 is chanllenging to implement.
+In the function `initiateDeck()`, the program has two steps: 1. initate the card deck 2. distribute the initial card to CP1, CP2 & Player. The step 2 is relatively easy, but the step 1 is chanllenging to implement.
 
-To implement the initiation of the the card deck, I created a function called `createDeck()`. In the function, I first push_back 4(colors)*12(values) Card(c,v), and added 2 kings and 2 jokers. At this time, the 52 `Card`s in `deck` had not been shuffled. So I wrote a function `shuffleDeck (vector<Card>& d)` to shuffle the deck.
+To implement the initiation of the the card deck, I created a function called `createDeck()`. In the function, I first push_back 4(colors)*12(values) `Card(c,v)`, and added 2 kings and 2 jokers. At this time, the 52 `Card`s in `deck` had not been shuffled. So I wrote a function `shuffleDeck (vector<Card>& d)` to shuffle the deck.
 
-In the function `shuffleDeck()`, I first created an array `arr[52]` and initiated the i-th element to be i. Then I called a function `shuffleArray(T (&arr)[N])` to shuffle `arr[]`. In `shuffleArray()`, I used the following random number generation engine to generate high-quality random number based on Mersenne Twister Algorithm:
+In the function `shuffleDeck()`, I first created an array `arr[52]` and initiated the i-th element to be `i`. Then I called a function `shuffleArray(T (&arr)[N])` to shuffle `arr[]`. In `shuffleArray()`, I used the following random number generation engine to generate high-quality random number based on Mersenne Twister Algorithm:
 ```
 random_device rd;
 mt19937 rng(rd());

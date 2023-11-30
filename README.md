@@ -107,8 +107,37 @@ None
 
 ## Problem Collection for Final Assessment
 
-### 1. Shuffling a deck (solved) ()
-initiateDeck() ???
+### 1. Shuffling a deck (solved) (Zhang Kezhen)
+In the function initiateDeck(), the programm has two steps: 1. initate the card deck 2. distribute the initial card to CP1, CP2 & Player. The step 2 is relatively easy, but the step 1 is chanllenging to implement.
+
+To implement the initiation of the the card deck, I created a function called `createDeck()`. In the function, I first push_back 4(colors)*12(values) Card(c,v), and added 2 kings and 2 jokers. At this time, the 52 `Card`s in `deck` had not been shuffled. So I wrote a function `shuffleDeck (vector<Card>& d)` to shuffle the deck.
+
+In the function `shuffleDeck()`, I first created an array `arr[52]` and initiated the i-th element to be i. Then I called a function `shuffleArray(T (&arr)[N])` to shuffle `arr[]`. In `shuffleArray()`, I used the following random number generation engine to generate high-quality random number based on Mersenne Twister Algorithm:
+```
+random_device rd;
+mt19937 rng(rd());
+```
+
+Then I used Fisher-Yates Shuffling Algorithm to implement the shuffling operating of `arr[]`:
+```
+for (size_t i = N - 1; i > 0; --i) {
+   uniform_int_distribution<size_t> dist(0, i);
+   size_t j = dist(rng);
+   swap(arr[i], arr[j]);
+}
+```
+
+Now, we got an array `arr[52]` with random numbers of card order. I used these number to shuffle the unshuffled deck `d` and store it into a temporary deck `temp`. Finally, I assigned `temp` to the reference parameter `d` to finish the shuffle operation of the deck.
+```
+// shuffle the deck
+vector<Card> temp;
+for (int i=0; i<52; i++) {
+   temp.push_back(d[arr[i]]);
+}
+
+d = temp;
+```
+
 
 ### 2. Displaying visible cards (solved) (Deng Qiwen)
 To display visible cards to players is a key funcion that need to be achieved in this game. To figure out which card is visible for players, I wrote `isKnown()` to check each card in player's hand is defined known or not. This function is achieved by return a true value when array knowncards[i] equals to card[i], and return false when they are not equal. Then, for known cards, `showOneCard()` is designed to make knowncards visible for players, including its number and color.

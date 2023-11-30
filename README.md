@@ -183,8 +183,8 @@ Determining the optimal time to call Cabo is a critical decision for the compute
 In another class, I learned about Monte Carlo Simulation, which inspired me to take a different approach. I decided to let the computer play for a million rounds by itself and gather data to analyze the best conditions for calling Cabo. After processing the collected data, I created a list stored in the function `computerCaboCondition()`. This list provides the computer player with guidelines for calling Cabo, resulting in a winning rate of approximately 50% in the game.
 
 
-## Video (Zhang Kezhen)
-This is video to introduce the rule of CABO for easy understanding and show a gameplay.
+## Video
+This is video to introduce the rule of CABO for easy understanding and show a gameplay.(Zhang Kezhen)
 https://www.youtube.com/watch?v=aytw7-b1Lyg
 
 
